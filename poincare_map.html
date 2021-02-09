@@ -14,10 +14,10 @@
 <body>
 <div id="map"></div>
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1Ijoib2J1Y2hlbCIsImEiOiJmOWQ2MzQxNmE0M2Y3YmVjNzA2NmM2MGQzYTIwYmQ3OCJ9.psxJSN8q9n2-HfFGoIUNJA';
+	mapboxgl.accessToken = 'pk.eyJ1Ijoib2J1Y2hlbCIsImEiOiJjanlrY3diNzIwZDdxM25uN2owN2c5ZHpiIn0.XzMbcbHF6H42u0Uxo1L8lg';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/light-v10',
+style: 'mapbox://styles/mapbox/dark-v9',
 zoom: 3,
 center: [-92.447303, 40.753574]
 });
@@ -36,32 +36,20 @@ map.on('load', function () {
 }
 */
 map.addSource('ethnicity', {
-type: 'vector',
-url: 'poincare.json'
+type: 'geojson',
+data: 'poincare.json'
 });
+//http://ec2-35-153-102-199.compute-1.amazonaws.com/elastic/    
 var arr=[[-1, '#000000'],[0, '#1a9850'],[20, '#fed976'],[40, '#fd8d3c'],[50, '#bd0026'],[100, '#800026']];       
 map.addLayer({
 'id': 'population',
 'type': 'circle',
 'source': 'ethnicity',
-'source-layer': 'sf2010',
+//'source-layer': 'sf2010',
 'paint': {
-// make circles larger as the user zooms from z12 to z22
-    'circle-radius': 3,
-'circle-color': {
-property: "sd1",
-stops: arr
-}
-//'fill-outline-color': 'hsl(0,0,84%)',
-//'circle-outline-color': 'black',
-/*'circle-opacity': [
-'case',
-['boolean', ['feature-state', 'hover'], false],
-1,
-0.5
-]*/
-    
-//'circle-color': ['get', 'sd1'],
+'circle-radius': 3,
+'circle-color': 'red',
+'circle-opacity': 0.6
 }
 });
 });
