@@ -48,7 +48,11 @@ map.addLayer({
 //'source-layer': 'sf2010',
 'paint': {
 'circle-radius': 3,
-'circle-color': 'red',
+    'circle-color': {
+property: "sd1",
+stops: arr
+},
+    
 'circle-opacity': 0.6
 }
 });
