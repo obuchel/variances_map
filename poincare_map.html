@@ -47,7 +47,13 @@ map.addLayer({
 'source': 'ethnicity',
 //'source-layer': 'sf2010',
 'paint': {
-'circle-radius': 3,
+'circle-radius': {
+'base': 1.75,
+'stops': [
+[12, 2],
+[22, 180]
+]
+},
     'circle-color': {
 property: "sd1",
 stops: arr
