@@ -39,7 +39,7 @@ map.addSource('ethnicity', {
 type: 'vector',
 url: 'poincare.json'
 });
-var arr=[[-1, '#000000'],[0, '#1a9850'],[0.1, '#fed976'],[0.4, '#fd8d3c'],[0.8, '#bd0026'],[1, '#800026']];       
+var arr=[[-1, '#000000'],[0, '#1a9850'],[20, '#fed976'],[40, '#fd8d3c'],[50, '#bd0026'],[100, '#800026']];       
 map.addLayer({
 'id': 'population',
 'type': 'circle',
@@ -47,13 +47,7 @@ map.addLayer({
 'source-layer': 'sf2010',
 'paint': {
 // make circles larger as the user zooms from z12 to z22
-'circle-radius': {
-'base': 1.75,
-'stops': [
-[12, 2],
-[22, 180]
-]
-},
+    'circle-radius': 3,
 'circle-color': {
 property: "sd1",
 stops: arr
