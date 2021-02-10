@@ -14,13 +14,13 @@ import seaborn as sns
 from pandas import Grouper
 import os
 
-first=49
+first=1
 second=79
 for el in range(first,second):
     un_labels=[]
     if len(str(el))<2:
         #os.system('cd /Users/olgabuchel/Sites/sg-social-distancing2/0'+str(el))
-        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/0'+str(el))
+        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/0'+str(el))
         for item in arr:
             #print(item[:4])
             if str(item[:4]) not in un_labels:
@@ -28,7 +28,7 @@ for el in range(first,second):
                 #os.system('mkdir '+str(item[:4]))
     else:
         #os.system('cd /Users/olgabuchel/Sites/sg-social-distancing2/'+str(el))
-        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/'+str(el))
+        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/'+str(el))
         #print(arr)
         for item in arr:
             #print(item[:4])
@@ -40,12 +40,12 @@ for el in range(first,second):
 
 for el in range(first,second):
     if len(str(el))<2:
-        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/0'+str(el))
+        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/0'+str(el))
         for item in arr:
             #print(item)
-            os.system('mv /Users/olgabuchel/Sites/sg-social-distancing2/'+ str(item[:2])+'/'+item+' /Users/olgabuchel/Sites/sg-social-distancing2/'+ str(item[:2])+'/'+str(item[:4])+'/'+item)                                                                                            
+            os.system('mv /Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/'+ str(item[:2])+'/'+item+' /Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/'+ str(item[:2])+'/'+str(item[:4])+'/'+item)                                                                                            
     else:
-        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/'+str(el))
+        arr = os.listdir('/Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/'+str(el))
         for item in arr:
             #print(item)
-            os.system('mv /Users/olgabuchel/Sites/sg-social-distancing2/'+ str(item[:2])+'/'+item+' /Users/olgabuchel/Sites/sg-social-distancing2/'+ str(item[:2])+'/'+str(item[:4])+'/'+item)
+            os.system('mv /Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/'+ str(item[:2])+'/'+item+' /Users/olgabuchel/Sites/sg-social-distancing2/poincare_map_2019/'+ str(item[:2])+'/'+str(item[:4])+'/'+item)
