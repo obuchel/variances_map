@@ -158,7 +158,7 @@ var nn=e.features[0].properties.geoid.toString().substr(0,2);
 
     
    // alert(e.features[0].properties.geoid.toString().substr(0,2));
-    var url="http://ec2-35-153-102-199.compute-1.amazonaws.com/elastic/"+nn+'/'+nn1+'/'+nn2+e.features[0].properties.geoid.toString().split(".")[0]+'.csv';
+    var url="https://obuchel.github.io/variances_map/"+nn+'/'+nn1+'/'+nn2+e.features[0].properties.geoid.toString().split(".")[0]+'.csv';
     //console.log(url);
     d3.csv(url, function(error,data7) {
 
