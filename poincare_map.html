@@ -114,9 +114,9 @@ data: 'poincare.json'
     /*
 #e31a1c
 #bd0026
-#800026
+#800026 [1, '#fed976']
 */
-    var arr=[[-1, '#000000'],[0, '#1a9850'],[1, '#fed976'],[10, '#fd8d3c'],[1000, '#e31a1c'],[1000, '#bd0026'],[10000, '#800026']];       
+    var arr=[[0, '#000000'],[1, '#1a9850'],[10, '#fed976'],[100, '#fd8d3c'],[1000, '#e31a1c'],[10000, '#800026']];       
 map.addLayer({
 'id': 'population',
 'type': 'circle',
@@ -136,7 +136,7 @@ property: "sd1",
 stops: arr
 },
     
-'circle-opacity': 0.6
+'circle-opacity': 1
 }
 });
 map.on('click', 'population', function (e) {
