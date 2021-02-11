@@ -141,7 +141,7 @@ stops: arr
 });
 map.on('click', 'population', function (e) {
 var coordinates = e.features[0].geometry.coordinates.slice();
-var description = "<b>"+e.features[0].properties.geoid+"</b> <br><b>sd1</b>:"+e.features[0].properties.sd1+" <br><b>sd2</b>:"+e.features[0].properties.sd2+" <br><b>ellipse_area</b>"+e.features[0].properties.ellipse_area+" <br><b>sd_ratio</b>:"+e.features[0].properties.sd_ratio;
+var description = "<b>"+e.features[0].properties.geoid+"</b> <br><b>sd1</b>:"+e.features[0].properties.sd1_original+" <br><b>sd2</b>:"+e.features[0].properties.sd2+" <br><b>ellipse_area</b>"+e.features[0].properties.ellipse_area+" <br><b>sd_ratio</b>:"+e.features[0].properties.sd_ratio;
  
 // Ensure that if the map is zoomed out such that multiple
 // copies of the feature are visible, the popup appears
