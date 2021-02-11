@@ -110,8 +110,13 @@ map.addSource('ethnicity', {
 type: 'geojson',
 data: 'poincare.json'
 });
-//http://ec2-35-153-102-199.compute-1.amazonaws.com/elastic/    
-var arr=[[-1, '#000000'],[0, '#1a9850'],[20, '#fed976'],[40, '#fd8d3c'],[50, '#bd0026'],[100, '#800026']];       
+    //http://ec2-35-153-102-199.compute-1.amazonaws.com/elastic/
+    /*
+#e31a1c
+#bd0026
+#800026
+*/
+    var arr=[[-1, '#000000'],[0, '#1a9850'],[1, '#fed976'],[10, '#fd8d3c'],[1000, '#e31a1c'],[1000, '#bd0026'],[10000, '#800026']];       
 map.addLayer({
 'id': 'population',
 'type': 'circle',
